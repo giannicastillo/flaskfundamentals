@@ -1,0 +1,20 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+.square-r{
+    display: inline-block;
+    background-color: green;
+    height: 25px;
+    width: 25px;
+    align-items: center;
+    padding: 5px;
+}
+.square-b{
+    display: inline-block;
+    background-color: beige
+    height: 25px;
+    width: 25px;
+    align-items: center;
+    padding: 5px;
+}

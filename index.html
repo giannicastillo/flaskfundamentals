@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .color2{
+            display: inline-block;
+            height: 25px;
+            width: 25px;
+            align-items: center;
+            padding: 5px;
+            background-color: red;
+        }
+        .color1{
+            display: inline-block;
+            height: 25px;
+            width: 25px;
+            align-items: center;
+            padding: 5px;
+            background-color: black;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/style.css') }}">
+    <title>Checkboard Assignment</title>
+</head>
+<body>
+    <!-- <table> -->
+    <div class="baord">
+        {% for i in range (0,x): %}
+        <div></div>
+        {% for j in range (0,y):%}
+        <div class='color{{ (i+j)%2+1 }}'></div>
+            {% endfor %}
+            {% endfor %}
+    <!-- </tr> -->
+    </div>
+
+            <!-- <td class="square-r"></td>
+            <td class="square-b"></td>
+            <td class="square-r"></td>
+            <td class="square-b"></td>
+            <td class="square-r"></td>
+            <td class="square-b"></td>
+            <td class="square-r"></td>
+            <td class="square-b"></td>
+        </tr>
+            <td class="square-b"></td>
+            <td class="square-r"></td>
+            <td class="square-b"></td>
+            <td class="square-r"></td>
+            <td class="square-b"></td>
+            <td class="square-r"></td>
+            <td class="square-b"></td>
+            <td class="square-r"></td>
+        <tr>
+            <td class="square-r"></td>
+            <td class="square-b"></td>
+            <td class="square-r"></td>
+            <td class="square-b"></td>
+            <td class="square-r"></td>
+            <td class="square-b"></td>
+            <td class="square-r"></td>
+            <td class="square-b"></td>
+        </tr>
+            <td class="square-b"></td>
+            <td class="square-r"></td>
+            <td class="square-b"></td>
+            <td class="square-r"></td>
+            <td class="square-b"></td>
+            <td class="square-r"></td>
+            <td class="square-b"></td>
+            <td class="square-r"></td>
+        </tr>
+        <tr>
+            <td class="square-r"></td>
+            <td class="square-b"></td>
+            <td class="square-r"></td>
+            <td class="square-b"></td>
+            <td class="square-r"></td>
+            <td class="square-b"></td>
+            <td class="square-r"></td>
+            <td class="square-b"></td>
+        </tr>
+            <td class="square-b"></td>
+            <td class="square-r"></td>
+            <td class="square-b"></td>
+            <td class="square-r"></td>
+            <td class="square-b"></td>
+            <td class="square-r"></td>
+            <td class="square-b"></td>
+            <td class="square-r"></td>
+        <tr>
+            <td class="square-r"></td>
+            <td class="square-b"></td>
+            <td class="square-r"></td>
+            <td class="square-b"></td>
+            <td class="square-r"></td>
+            <td class="square-b"></td>
+            <td class="square-r"></td>
+            <td class="square-b"></td>
+        </tr>
+            <td class="square-b"></td>
+            <td class="square-r"></td>
+            <td class="square-b"></td>
+            <td class="square-r"></td>
+            <td class="square-b"></td>
+            <td class="square-r"></td>
+            <td class="square-b"></td>
+            <td class="square-r"></td>
+        </tr> 
+    </table> -->
+    </div> 
+</body>
+</html>
