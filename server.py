@@ -1,39 +1,22 @@
-from flask import Flask  # Import Flask to allow us to create our app
+from flask import Flask, render_template
+app= Flask (__name__)
+
+@app.route('/list')
+def render_list():
+    users = [
+    {'first_name' : 'Michael', 'last_name' : 'Choi'},
+    {'first_name' : 'John', 'last_name' : 'Supsupin'},
+    {'first_name' : 'Mark', 'last_name' : 'Guillen'},
+    {'first_name' : 'KB', 'last_name' : 'Tonel'}
+    ]
+    return render_template("list.html", user_info=users)
 
 
-app = Flask(__name__)    # Create a new instance of the Flask class called "app"
-
-@app.route('/')          # The "@" decorator associates this route with the function immediately following
-def index():
-    return 'Hello World!'  # Return the string 'Hello World!' as a response
-
-@app.route('/dojo')
-def dojo():
-    return 'Dojo'
-
-@app.route('/say/<name>')
-def say(name):
-    print (name)
-    return "Hi " + name 
-
-@app.route('/hello/<string:banana>/<int:num>')
-def hello(banana,num):
-    return f"Hello {banana * num}"
+@app.route('/', defaults={'path': ''})
+@app.route('/<path:path>')
+def catch_all(path):
+    return 'Invalid URL.'
 
 
-
-
-
-
-
-
-
-if __name__=="__main__":   # Ensure this file is being run directly and not from a different module    
-    app.run(debug=True)    # Run the app in debug mode.
-
-
-
-
-
-
-
+if __name__=="__main__":
+    app.run(debug=True)
